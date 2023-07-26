@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class Meetings(models.Model):
+class Meeting(models.Model):
     meeting_title = models.CharField(max_length=255)
     meeting_date = models.DateField()
     meeting_time = models.TimeField()
@@ -16,6 +16,6 @@ class Meetings(models.Model):
         """
             A class to represent the meta data of the Meetings model.
         """
-        db_table = 'meetings'
-        verbose_name_plural = 'meetings'
+        db_table = 'meeting'
+        verbose_name_plural = 'meeting'
         ordering = ['meeting_date']
