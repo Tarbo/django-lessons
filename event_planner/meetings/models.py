@@ -11,7 +11,7 @@ class Meeting(models.Model):
     duration = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.meeting_title
+        return f'{self.meeting_title} at {self.meeting_location} on {self.meeting_date} at {self.meeting_time}'
 
     class Meta:
         """
